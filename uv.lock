@@ -1,0 +1,57 @@
+version = 1
+revision = 3
+requires-python = "==3.13.*"
+
+[[package]]
+name = "click"
+version = "8.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/46/61/de6cd827efad202d7057d93e0fed9294b96952e188f7384832791c7b2254/click-8.3.0.tar.gz", hash = "sha256:e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4", size = 276943, upload-time = "2025-09-18T17:32:23.696Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/db/d3/9dcc0f5797f070ec8edf30fbadfb200e71d9db6b84d211e3b2085a7589a0/click-8.3.0-py3-none-any.whl", hash = "sha256:9b9f285302c6e3064f4330c05f05b81945b2a39544279343e6e7c5f27a9baddc", size = 107295, upload-time = "2025-09-18T17:32:22.42Z" },
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697, upload-time = "2022-10-25T02:36:22.414Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335, upload-time = "2022-10-25T02:36:20.889Z" },
+]
+
+[[package]]
+name = "dylib-adder"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "click" },
+    { name = "lief" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "click", specifier = ">=8.0.0,<9.0.0" },
+    { name = "lief", specifier = ">=0.17.0,<0.18.0" },
+]
+
+[[package]]
+name = "lief"
+version = "0.17.0"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a0/a7/a4e4bf099efc9d4a75bc3f34fc4bb7b206ca7e34109e43ff436cc5c9dc3f/lief-0.17.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:580f09dfa152d8a15f2cce6578f0a945b0e5ba6148de614857620b087c62fbdd", size = 3000794, upload-time = "2025-09-14T13:53:56.757Z" },
+    { url = "https://files.pythonhosted.org/packages/3f/93/4c212e4aa295c7121a9d06c676c03ddd2886550293995b600b936176e575/lief-0.17.0-cp313-cp313-macosx_11_0_x86_64.whl", hash = "sha256:d97c08dbfbb8a380347ca45b1f3efcf56f0d54d149e12d1cf16ad40abe039afd", size = 3106935, upload-time = "2025-09-14T13:54:00.007Z" },
+    { url = "https://files.pythonhosted.org/packages/2d/89/2dbb0c44e528ced0f78b81798d9f7cfe477a310d04ef5b7d02602ab079e5/lief-0.17.0-cp313-cp313-manylinux2014_aarch64.whl", hash = "sha256:044e77a80e00bd242f358744ddb98f50ada5c0a50091016d66ae02f4a6baf694", size = 3674167, upload-time = "2025-09-14T13:54:02.907Z" },
+    { url = "https://files.pythonhosted.org/packages/61/1e/a672a45b2e25492696c9418004db60c227b2e767a9592d5b7ce9c3952d22/lief-0.17.0-cp313-cp313-manylinux_2_28_i686.whl", hash = "sha256:aea5b7f108e0ebef75fc3b081d6a72e9a7bd4bae5ac5b4d97fe001292fefec9d", size = 3501462, upload-time = "2025-09-14T13:54:05.75Z" },
+    { url = "https://files.pythonhosted.org/packages/1d/3d/cbacfed7af263d4ba653b25c69e5bea58e2d9e8e53857bbce052bdbea25c/lief-0.17.0-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:bcdcc52ee83bc2a16229d0df6595199576725db4555e35ac880852b7576534ed", size = 3404847, upload-time = "2025-09-14T13:54:07.831Z" },
+    { url = "https://files.pythonhosted.org/packages/b0/3d/0823baeda5b63bd5a126c5bd15ebd8293a1cb108d79ae420dd64c948af95/lief-0.17.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:cd2d0e1960ee314c7930911b527228926f4ff2dcef3ca22a4b411cb7054f0d66", size = 3592209, upload-time = "2025-09-14T13:54:10.544Z" },
+    { url = "https://files.pythonhosted.org/packages/81/7f/8e3d7b0a93aadc83d6f9e743c75485a5a8333a85ea7be582b318b0da47fd/lief-0.17.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:f4d0e264368b54e54796e56b578681c3bd5eeef7c2d280acaaa918d896883aaf", size = 3958431, upload-time = "2025-09-14T13:54:12.412Z" },
+    { url = "https://files.pythonhosted.org/packages/25/08/338e8ee06948022a1b0cd7d2f194a096c818384e4b7cfc7807e7bd023769/lief-0.17.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:89506b0a4a262bf9cefaaaaa628c2ffbf0857b8d1056e6a9fca24748470a4485", size = 3705355, upload-time = "2025-09-14T13:54:15.034Z" },
+    { url = "https://files.pythonhosted.org/packages/29/8d/6001295abca3535099cfd328302129551678a8ce8deeda39e83a95b07762/lief-0.17.0-cp313-cp313-win32.whl", hash = "sha256:340155975e25ed68f39fb43b0023cb8571f3171da1b3e6fa7a40441c4e547208", size = 3459310, upload-time = "2025-09-14T13:54:17.975Z" },
+    { url = "https://files.pythonhosted.org/packages/ff/ad/deb8f595f04610f9daa747784b278e12c3b0cc99cc46135db6ffb61cd651/lief-0.17.0-cp313-cp313-win_amd64.whl", hash = "sha256:467b25c857239271077c5ac9d97d8c1fb0282ce84096f2518ef03c244660ef10", size = 3637564, upload-time = "2025-09-14T13:54:19.713Z" },
+    { url = "https://files.pythonhosted.org/packages/bf/33/84bf9a0b3e5eae0867cd5fc850e39e1bae25c6de1e851654eec5ef405342/lief-0.17.0-cp313-cp313-win_arm64.whl", hash = "sha256:112773fb27ba0ccf1abfd62e5e7e9ca8332d46990304c8286613e22c6ab0f5e4", size = 3472711, upload-time = "2025-09-14T13:54:21.829Z" },
+]
