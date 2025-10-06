@@ -5,16 +5,14 @@ import lief
 
 
 def add_library(binary_path: Path, dylib_path: str) -> None:
-    app = lief.parse(binary_path)
-
-    if not app:
+    fat_binary = lief.MachO.parse(binary_path)
+    if not fat_binary:
         raise click.ClickException("`lief.parse()` returned None")
-    if not isinstance(app, lief.MachO.Binary):
-        raise click.ClickException("Parsed file is not a Mach-O binary")
 
-    app.add_library(dylib_path)
-    app.remove_signature()
-    app.write(binary_path)
+    for binary in fat_binary:
+        binary.add_library(dylib_path)
+        binary.remove_signature()
+    fat_binary.write(str(binary_path))
 
 
 @click.command()
